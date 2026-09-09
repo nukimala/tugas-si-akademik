@@ -4,9 +4,9 @@
     public function handle()
     {
         if (!isset($_SESSION['login'])){
-
-        header('location: /si-akademik/public/login');
-        exit;
+            $_SESSION['error'] = "Anda belum login!";
+            header('location: /si-akademik/public/login');
+            exit;
         }
     }
  }
